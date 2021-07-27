@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosInstance, AxiosResponse } from "axios";
 import teams from "@nhl-api/teams";
 import players from "@nhl-api/players";
 
@@ -16,7 +16,7 @@ export interface Options {
   date?: string;
 }
 
-export const api = axios.create({
+export const api: AxiosInstance = axios.create({
   baseURL: "https://statsapi.web.nhl.com/api/v1"
 });
 

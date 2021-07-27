@@ -27,8 +27,7 @@ export const throwError = (fn: string, msg?: string, err?: Error): void => {
 export const getId = (resource: any, name: string): number | any[] => {
   const data = resource.filter(
     res =>
-      res.name.includes(name.toUpperCase()) ||
-      res.nicknames.some(nickname => nickname === name.toUpperCase())
+      res.name.includes(name.toUpperCase())
   );
 
   if (!data.length) {
